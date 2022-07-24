@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolygonPrototype_Global_Grid_01
+  m_Name: material_obstacle
   m_Shader: {fileID: 4800000, guid: d6f2a6aa53be2674580ae1599bb9a33e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -31,5 +31,5 @@ Material:
     - _OverlayAmount: 0.5
     - __dirty: 1
     m_Colors:
-    - _BaseColor: {r: 0.09891941, g: 0.36862746, b: 0.06666666, a: 0}
+    - _BaseColor: {r: 0.105511285, g: 0.16037738, b: 0.005295483, a: 0}
   m_BuildTextureStacks: []
