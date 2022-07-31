@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TMP_Text energyText;
     [SerializeField] private int maxEnergy;
     [SerializeField] private int energyRechargeDuration;
+    [SerializeField] private AndroidNotificationHandler androidNotificationHandler;
+
 
     private int energy;
 
@@ -51,6 +53,11 @@ public class MainMenu : MonoBehaviour
         
         DateTime energyReady = DateTime.Now.AddMinutes(energyRechargeDuration);
         PlayerPrefs.SetString(EnergyReadyKey, energyReady.ToString());
+        
+        //Set notification to inform player that energy was recharged
+#if UNITY_ANDROID
+        androidNotificationHandler.ScheduleNotification(energyReady);
+#endif
     }
 
     private void ConsumeEnergy()
