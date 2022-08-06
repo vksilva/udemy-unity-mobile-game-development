@@ -158,6 +158,7 @@ MonoBehaviour:
   maxEnergy: 5
   energyRechargeDuration: 2
   androidNotificationHandler: {fileID: 185792912}
+  PlayButton: {fileID: 1132188746}
 --- !u!4 &185792911
 Transform:
   m_ObjectHideFlags: 0
