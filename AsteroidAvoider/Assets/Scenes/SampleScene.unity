@@ -156,6 +156,7 @@ MonoBehaviour:
   forceMagnitude: 100
   maxVelocity: 6
   playerRigidbody: {fileID: 171058539}
+  rotationSpeed: 6
 --- !u!4 &171058538
 Transform:
   m_ObjectHideFlags: 0

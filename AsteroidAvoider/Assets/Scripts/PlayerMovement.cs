@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forceMagnitude;
     [SerializeField] private float maxVelocity;
     [SerializeField] private Rigidbody playerRigidbody;
+    [SerializeField] private float rotationSpeed;
 
     private Vector3 movementDirection;
     private Camera mainCamera;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ProcessInput();
         KeepPlayerOnScreen();
+        RotateToFaceVelocity();
     }
 
     private void KeepPlayerOnScreen()
@@ -83,5 +85,13 @@ public class PlayerMovement : MonoBehaviour
         {
             movementDirection = Vector3.zero;
         }
+    }
+
+    private void RotateToFaceVelocity()
+    {
+        if (playerRigidbody.velocity == Vector3.zero) {return;}
+        
+        Quaternion targetRotation = Quaternion.LookRotation(playerRigidbody.velocity, Vector3.back);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }
