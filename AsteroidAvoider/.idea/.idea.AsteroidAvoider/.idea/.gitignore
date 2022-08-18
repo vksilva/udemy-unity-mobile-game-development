@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.AsteroidAvoider.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\vanessa\projects\udemy-unity-mobile-game-development\AsteroidAvoider\.idea\.idea.AsteroidAvoider\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
