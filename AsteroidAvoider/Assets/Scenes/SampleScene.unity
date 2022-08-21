@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e321bd7397344c45b51798d7ade2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceShipHealth: 3
 --- !u!64 &171058541
 MeshCollider:
   m_ObjectHideFlags: 0

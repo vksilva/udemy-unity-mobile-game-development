@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private int spaceShipHealth;
     public void Crash()
     {
-        gameObject.SetActive(false);
+        spaceShipHealth--;
+        if (spaceShipHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
