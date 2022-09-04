@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed41ff3335bc00f4b98e2bddee81854a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 7164064739550696501, guid: 4e008ed5b9befd640afa3423e6fd3aad,
+  asteroidPrefab: {fileID: -5152689670467844365, guid: 9d7e262fcf3780a44bb55ab0b1bf09f7,
     type: 3}
   secondsBetweenAsteroids: 0.5
   asteroidForceRange: {x: 3, y: 6}

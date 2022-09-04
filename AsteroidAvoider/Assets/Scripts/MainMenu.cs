@@ -10,4 +10,9 @@ public class MainMenu : MonoBehaviour
         // Load Scene_Main
         SceneManager.LoadScene(1);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

@@ -85,6 +85,7 @@ public class AsteroidSpawner : MonoBehaviour
                 CreateRandomRotation());
         }
 
+        asteroidInstance.Initialize();
         Rigidbody asteroidRigidbody = asteroidInstance.GetComponent<Rigidbody>();
         asteroidRigidbody.velocity = direction.normalized * Random.Range(asteroidForceRange.x, asteroidForceRange.y);
     }
