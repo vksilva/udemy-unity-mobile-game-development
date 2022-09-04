@@ -1,7 +1,7 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverHandler : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private ScoreSystem scoreSystem;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private Button continueButton;
+    
     
 
     private float score;
@@ -30,7 +32,18 @@ public class GameOverHandler : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    
     public void Continue()
+    {
+        AdManager.Instance.ShowAd(this);
+        continueButton.interactable = false;
+    }
+
+    public void ContinueGame()
     {
         asteroidSpawner.enabled = true;
         scoreSystem.enabled = true;
@@ -39,9 +52,5 @@ public class GameOverHandler : MonoBehaviour
         
         playerHealth.SetAlive();
     }
-
-    public void ReturnToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 }

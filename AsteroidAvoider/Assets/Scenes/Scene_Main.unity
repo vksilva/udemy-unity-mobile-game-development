@@ -205,6 +205,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1015654976}
   scoreSystem: {fileID: 1969253376}
   playerHealth: {fileID: 171058540}
+  continueButton: {fileID: 2036521273}
 --- !u!4 &108472378
 Transform:
   m_ObjectHideFlags: 0

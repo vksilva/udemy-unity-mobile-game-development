@@ -33,7 +33,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     {
         this.gameOverHandler = gameOverHandler;
         
-        Advertisement.Show("RewardedVideo");
+        Advertisement.Show("rewardedVideo");
     }
 
     public void OnUnityAdsReady(string placementId)
@@ -56,7 +56,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
         switch (showResult)
         {
             case ShowResult.Finished:
-                gameOverHandler.Continue();
+                gameOverHandler.ContinueGame();
                 break;
             case ShowResult.Skipped:
                 // Ad was skipped
