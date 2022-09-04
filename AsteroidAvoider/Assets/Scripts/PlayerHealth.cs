@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     private void Awake()
     {
         spaceShipHealth = spaceShipMaxHealth;
+        lastHitTime = Time.time - invulnerableTime*2;
     }
 
     private void Update()
