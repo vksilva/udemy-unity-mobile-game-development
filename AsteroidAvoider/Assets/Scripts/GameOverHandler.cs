@@ -8,6 +8,8 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private AsteroidSpawner asteroidSpawner;
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private ScoreSystem scoreSystem;
+    [SerializeField] private PlayerHealth playerHealth;
+    
 
     private float score;
     private string score_text;
@@ -30,7 +32,12 @@ public class GameOverHandler : MonoBehaviour
 
     public void Continue()
     {
+        asteroidSpawner.enabled = true;
+        scoreSystem.enabled = true;
         
+        this.gameObject.SetActive(false);
+        
+        playerHealth.SetAlive();
     }
 
     public void ReturnToMenu()

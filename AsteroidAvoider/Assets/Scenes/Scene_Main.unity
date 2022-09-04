@@ -204,6 +204,7 @@ MonoBehaviour:
   asteroidSpawner: {fileID: 41740640}
   gameOverText: {fileID: 1015654976}
   scoreSystem: {fileID: 1969253376}
+  playerHealth: {fileID: 0}
 --- !u!4 &108472378
 Transform:
   m_ObjectHideFlags: 0
@@ -301,8 +302,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e321bd7397344c45b51798d7ade2ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceShipHealth: 3
+  spaceShipMaxHealth: 3
   gameOverHandler: {fileID: 108472377}
+  invulnerableTime: 2
+  adInvulnerableTime: 2
+  blinkDurationTime: 0.1
+  meshRenderer: {fileID: 1961207802}
+  invulnerableMaterial: {fileID: 2100000, guid: 7bd1abbfe833af64ea29f380bf983562,
+    type: 2}
+  shipMaterial: {fileID: 2100000, guid: 52421300d88860547a7d5db9856c407c, type: 2}
 --- !u!65 &171058541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6528,6 +6536,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -85}
   m_SizeDelta: {x: 0, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!23 &1961207802 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 910120405797434397, guid: 21ca0e09adc0d9d4e858a9bafa88ab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1209961614470092733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1969253375
 GameObject:
   m_ObjectHideFlags: 0
